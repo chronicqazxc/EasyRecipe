@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="RecipeDetailIngredientsCell" customModule="EasyRecipeUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v3f-wx-grE">
+                        <rect key="frame" x="10" y="5" width="34" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="E6z-tx-9Y5"/>
+                            <constraint firstAttribute="height" constant="34" id="ZnY-AR-WDj"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cF3-fC-Ba7">
+                        <rect key="frame" x="49" y="12" width="266" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cF3-fC-Ba7" firstAttribute="leading" secondItem="v3f-wx-grE" secondAttribute="trailing" constant="5" id="BNg-ao-616"/>
+                    <constraint firstItem="cF3-fC-Ba7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Efz-2N-dhq"/>
+                    <constraint firstItem="v3f-wx-grE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="G0f-Ls-iVZ"/>
+                    <constraint firstAttribute="bottom" secondItem="v3f-wx-grE" secondAttribute="bottom" constant="5" id="gPR-gr-vd8"/>
+                    <constraint firstAttribute="trailing" secondItem="cF3-fC-Ba7" secondAttribute="trailing" constant="5" id="oyH-9y-1dK"/>
+                    <constraint firstItem="v3f-wx-grE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="v60-LC-8aE"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="ingredientImageView" destination="v3f-wx-grE" id="Ajh-JC-YMt"/>
+                <outlet property="ingredientName" destination="cF3-fC-Ba7" id="SSi-uV-fzl"/>
+            </connections>
+            <point key="canvasLocation" x="-32" y="53"/>
+        </tableViewCell>
+    </objects>
+</document>

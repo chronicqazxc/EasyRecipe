@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="241" id="KGk-i7-Jjw" customClass="RecipeDetailDescriptionCell" customModule="EasyRecipeUI" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="241"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="241"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHb-xW-PEQ">
+                        <rect key="frame" x="5" y="0.0" width="310" height="241"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QNM-Db-WIc">
+                                <rect key="frame" x="0.0" y="0.0" width="310" height="241"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Is there anything better than a really great sandwich? Why yes, mystery question asker: one that takes less than 10 minutes to prepare! Yep, all you have to do is assemble and dig in. This Really Great Sandwich has crusty bread, sweet fig jam, salty prosciutto, and nutty gouda. There\u2019s even a balsamic-tossed side salad to round things out. Put everything together at the office or be your own best friend and whip it up before you leave for work. When your stomach starts to grumble, you\u2019ll be looking at the office fridge with heart eyes.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="QNM-Db-WIc" secondAttribute="trailing" id="8ci-7v-GR2"/>
+                            <constraint firstAttribute="bottom" secondItem="QNM-Db-WIc" secondAttribute="bottom" id="Exs-Zk-zMb"/>
+                            <constraint firstItem="QNM-Db-WIc" firstAttribute="top" secondItem="JHb-xW-PEQ" secondAttribute="top" id="YnD-xb-R37"/>
+                            <constraint firstItem="QNM-Db-WIc" firstAttribute="leading" secondItem="JHb-xW-PEQ" secondAttribute="leading" id="f54-uv-h17"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="JHb-xW-PEQ" secondAttribute="bottom" id="KFH-kJ-s2a"/>
+                    <constraint firstAttribute="trailing" secondItem="JHb-xW-PEQ" secondAttribute="trailing" constant="5" id="Ywq-2k-sup"/>
+                    <constraint firstItem="JHb-xW-PEQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jph-dq-WNZ"/>
+                    <constraint firstItem="JHb-xW-PEQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="ouf-hE-tCQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="textView" destination="QNM-Db-WIc" id="m55-55-UO9"/>
+            </connections>
+            <point key="canvasLocation" x="-46.376811594202906" y="149.66517857142856"/>
+        </tableViewCell>
+    </objects>
+</document>

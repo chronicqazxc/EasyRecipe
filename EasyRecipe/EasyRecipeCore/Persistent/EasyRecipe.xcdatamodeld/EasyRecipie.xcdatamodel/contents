@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G103" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AccountModel" representedClassName="AccountModel" syncable="YES" codeGenerationType="class">
+        <attribute name="account_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="favoriteRecipes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RecipeModel" inverseName="favoritedBy" inverseEntity="RecipeModel"/>
+    </entity>
+    <entity name="RecipeModel" representedClassName="RecipeModel" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="recipe_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="favoritedBy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AccountModel" inverseName="favoriteRecipes" inverseEntity="AccountModel"/>
+    </entity>
+    <elements>
+        <element name="AccountModel" positionX="-36" positionY="9" width="128" height="88"/>
+        <element name="RecipeModel" positionX="0" positionY="45" width="128" height="88"/>
+    </elements>
+</model>
