@@ -123,7 +123,6 @@
 		B03F9E7D23700D9100E8FF59 /* WHCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; };
 		B03F9E7E23700D9200E8FF59 /* WHCoreServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B03F9E7F23700DAA00E8FF59 /* WHCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; };
-		B03F9E8023700DAA00E8FF59 /* WHCoreServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,7 +240,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B03F9E8023700DAA00E8FF59 /* WHCoreServices.framework in Embed Frameworks */,
 				A6DEFDE32349DA7B001F7502 /* EasyRecipeUI.framework in Embed Frameworks */,
 				A6BA123C2347752B00A81A94 /* EasyRecipeCore.framework in Embed Frameworks */,
 				A6BA1271234785A800A81A94 /* ProfileCore.framework in Embed Frameworks */,
