@@ -56,7 +56,3 @@ clone the repo and run `carthage update --platform ios` from the project root di
 - <a href="https://wayne-blog.herokuapp.com" target="_blank">Wayne Hsiao's blog</a>
 - [Wayne Hsiao's GitHub](https://github.com/chronicqazxc)
 
-## License
-
-ConfettiView is available under the MIT license.
-See the LICENSE file for more information.
