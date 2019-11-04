@@ -3,14 +3,12 @@
 
 # Desclamier
 All the recipes are mock data include the nutrition and ingredients.
-
+## Components
 1. EasyRecipeUI: Represent the human readable data and the layout. 
 2. EasyRecipeCore: Get the recipe data and generate the data model.
 3. ProfileUI: Provide user login view.
-4. ProfileCore: In charge of user login logic.    
-
-Technics:     
-
+4. ProfileCore: In charge of user login logic.   
+## Technics   
 1. Profile Login ​
 2. Core Data ​
 3. Keychain ​
