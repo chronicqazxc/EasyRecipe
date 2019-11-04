@@ -16,7 +16,7 @@ public class LoginViewControllerCoordinator: Coordinator {
     public var coordinators = [Coordinator]()
     
     public func navigateToNextPage() {
-        delegate?.navigateToNextPage()
+        
     }
     
     public func naviageBackToPreviousPage() {
@@ -37,18 +37,8 @@ public class LoginViewControllerCoordinator: Coordinator {
         let loginViewModel = self.loginViewModel ?? LoginViewModel()
         let loginViewController = LoginViewController.controllerWith(viewModel: loginViewModel, completeHandler: { (_, _) in
             
-        }, dismissHandler: { (_) in
-            
-        })
-        navigationController.present(loginViewController, animated: true, completion: nil)
-    }
-    
-    public func start(dismissHandler: @escaping ()->Void) {
-        let loginViewModel = self.loginViewModel ?? LoginViewModel()
-        let loginViewController = LoginViewController.controllerWith(viewModel: loginViewModel, completeHandler: { (_, _) in
-            
-        }, dismissHandler: { (_) in
-            dismissHandler()
+        }, dismissHandler: { [weak self] (_) in
+            self?.delegate?.finish()
         })
         navigationController.present(loginViewController, animated: true, completion: nil)
     }

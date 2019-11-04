@@ -14,17 +14,18 @@ import ProfileUI
 
 /// Coordinator that in charge of present the RecipeListViewController and the navigation logic.
 public class RecipeListCoordinator: Coordinator {
+    enum NavigateState {
+        case login
+        case recipe
+        case none
+    }
+    private var navigateState: NavigateState = .none
     public var delegate: CoordinatorDelegate?
-    
     public var coordinators = [Coordinator]()
-    
-    
     public var parameters: [AnyHashable : Any]?
     weak private(set) public var viewController: UIViewController?
-    
     weak private(set) var navigationController: UINavigationController!
     lazy var recipeNavigationController = UINavigationController()
-    
     public var loginViewModel: LoginViewModel?
     public var recipeListViewModel: RecipeListViewModel?
     
@@ -47,13 +48,25 @@ public class RecipeListCoordinator: Coordinator {
 
 extension RecipeListCoordinator: CoordinatorDelegate {
     public func finish() {
+        switch navigateState {
+        case .login:
+            if Profile.isLoggedIn == true {
+                (viewController as? RecipeListViewController)?.viewModel.getRecipes()
+            } else {
+                naviageBackToPreviousPage()
+            }
+        case .recipe:
+            break
+        case .none:
+            break
+        }
         coordinators.removeLast()
     }
-    
 
     public func navigateToNextPage() {
         
         if Profile.isLoggedIn == true {
+            navigateState = .recipe
             let recipeDetailCoordinator = RecipeDetailCoordinator(navigationController: recipeNavigationController)
             guard let recipeListViewController = viewController as? RecipeListViewController,
                 let recipe = recipeListViewController.viewModel.selectedRecipe else {
@@ -64,16 +77,12 @@ extension RecipeListCoordinator: CoordinatorDelegate {
             recipeDetailCoordinator.start()
             coordinators.append(recipeDetailCoordinator)
         } else {
-            navigateToLoginViewController { [weak self] in
-                guard let strongSelf = self else {
-                    return
-                }
-                if Profile.isLoggedIn == true {
-                    (strongSelf.viewController as? RecipeListViewController)?.viewModel.getRecipes()
-                } else {
-                    strongSelf.naviageBackToPreviousPage()
-                }
-            }
+            navigateState = .login
+            let loginCoordinator = LoginViewControllerCoordinator(navigationController: recipeNavigationController)
+            loginCoordinator.loginViewModel = loginViewModel ?? LoginViewModel()
+            loginCoordinator.delegate = self
+            loginCoordinator.start()
+            coordinators.append(loginCoordinator)
         }
     }
     
@@ -82,9 +91,7 @@ extension RecipeListCoordinator: CoordinatorDelegate {
     func  navigateToLoginViewController(dismissHandler: @escaping ()->Void) {
         let loginCoordinator = LoginViewControllerCoordinator(navigationController: recipeNavigationController)
         loginCoordinator.loginViewModel = loginViewModel ?? LoginViewModel()
-        loginCoordinator.start {
-            dismissHandler()
-        }
+        loginCoordinator.start()
         coordinators.append(loginCoordinator)
     }
     
