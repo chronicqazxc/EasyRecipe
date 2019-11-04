@@ -503,6 +503,7 @@
 		A6BA11F3234774BD00A81A94 = {
 			isa = PBXGroup;
 			children = (
+				B03F9E75237002CE00E8FF59 /* db.json */,
 				A6DEFE64234DDF87001F7502 /* README.md */,
 				A6E45651234DFA0D005390A3 /* HighLevelArchitecture.png */,
 				A6E45652234DFA0D005390A3 /* HighLevelDependency.png */,
@@ -671,7 +672,6 @@
 				A6DEFD9D2348A0C8001F7502 /* MockService.swift */,
 				A6CAD268236D7D27002A51FA /* recipes.json */,
 				A6DEFD9F2348A0E0001F7502 /* MockProfile.json */,
-				B03F9E75237002CE00E8FF59 /* db.json */,
 			);
 			path = Service;
 			sourceTree = "<group>";
