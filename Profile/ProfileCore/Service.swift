@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MyService
+import WHCoreServices
 
 /// Any services which injected into AuthenticationService should be adopt the ProfileService protocol.
 public protocol ProfileService {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MyService
+import WHCoreServices
 
 public class AuthCredential: Codable {
     let firstName: String

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MyService
+import WHCoreServices
 import EasyRecipeCore
 import ProfileCore
 import WHUIComponents

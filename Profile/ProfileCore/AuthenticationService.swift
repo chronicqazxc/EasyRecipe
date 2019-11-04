@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MyService
+import WHCoreServices
 
 enum AuthenticationError: Error {
     case loginFailed

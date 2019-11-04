@@ -26,8 +26,6 @@
 		A6BA126B234785A800A81A94 /* ProfileCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA126A234785A800A81A94 /* ProfileCoreTests.swift */; };
 		A6BA1270234785A800A81A94 /* ProfileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA125B234785A700A81A94 /* ProfileCore.framework */; };
 		A6BA1271234785A800A81A94 /* ProfileCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA125B234785A700A81A94 /* ProfileCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A6BA127A234785E400A81A94 /* MyService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12522347856400A81A94 /* MyService.framework */; };
-		A6BA127B234785E400A81A94 /* MyService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12522347856400A81A94 /* MyService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6BA12862348660D00A81A94 /* AuthenticationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA12852348660D00A81A94 /* AuthenticationServiceTests.swift */; };
 		A6BA128B23486C8500A81A94 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BA128923486AD700A81A94 /* MockService.swift */; };
 		A6BA128C23486C9400A81A94 /* MockProfile.json in Resources */ = {isa = PBXBuildFile; fileRef = A6BA1287234869C500A81A94 /* MockProfile.json */; };
@@ -44,7 +42,6 @@
 		A6DEFD7C234898CE001F7502 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DEFD7B234898CE001F7502 /* MainCoordinator.swift */; };
 		A6DEFD9E2348A0C8001F7502 /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DEFD9D2348A0C8001F7502 /* MockService.swift */; };
 		A6DEFDA02348A0E0001F7502 /* MockProfile.json in Resources */ = {isa = PBXBuildFile; fileRef = A6DEFD9F2348A0E0001F7502 /* MockProfile.json */; };
-		A6DEFDA32348B07B001F7502 /* MyService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12522347856400A81A94 /* MyService.framework */; };
 		A6DEFDAB2348B27B001F7502 /* ProfileUI.h in Headers */ = {isa = PBXBuildFile; fileRef = A6DEFDA82348B27B001F7502 /* ProfileUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A6DEFDAD2348B27B001F7502 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DEFDAA2348B27B001F7502 /* LoginViewModel.swift */; };
 		A6DEFDB12348B2AD001F7502 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DEFDAF2348B2AD001F7502 /* LoginViewController.swift */; };
@@ -112,17 +109,21 @@
 		A6DEFE62234DA7F1001F7502 /* RecipeSectionTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DEFE60234DA7F1001F7502 /* RecipeSectionTitleCell.swift */; };
 		A6E45638234DE835005390A3 /* ProfileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA125B234785A700A81A94 /* ProfileCore.framework */; };
 		A6E45639234DE835005390A3 /* ProfileCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA125B234785A700A81A94 /* ProfileCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A6E4563C234DE9A0005390A3 /* MyService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12522347856400A81A94 /* MyService.framework */; };
-		A6E4563D234DE9A0005390A3 /* MyService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12522347856400A81A94 /* MyService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6E4563F234DE9C7005390A3 /* ProfileUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA129423487CA900A81A94 /* ProfileUI.framework */; };
 		A6E45640234DE9C7005390A3 /* ProfileUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA129423487CA900A81A94 /* ProfileUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6E45643234DE9D0005390A3 /* EasyRecipeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12262347752900A81A94 /* EasyRecipeCore.framework */; };
 		A6E45644234DE9D0005390A3 /* EasyRecipeCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12262347752900A81A94 /* EasyRecipeCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6E45647234DE9D5005390A3 /* ProfileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA125B234785A700A81A94 /* ProfileCore.framework */; };
 		A6E45648234DE9D5005390A3 /* ProfileCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA125B234785A700A81A94 /* ProfileCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A6E4564B234DE9F5005390A3 /* MyService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12522347856400A81A94 /* MyService.framework */; };
-		A6E4564C234DE9F5005390A3 /* MyService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A6BA12522347856400A81A94 /* MyService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B03552E1235F769E00ADA2B3 /* RecipeDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03552E0235F769E00ADA2B3 /* RecipeDetailSection.swift */; };
+		B03F9E7723700D6000E8FF59 /* WHCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; };
+		B03F9E7823700D6000E8FF59 /* WHCoreServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B03F9E7A23700D7D00E8FF59 /* WHCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; };
+		B03F9E7B23700D7D00E8FF59 /* WHCoreServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B03F9E7D23700D9100E8FF59 /* WHCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; };
+		B03F9E7E23700D9200E8FF59 /* WHCoreServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B03F9E7F23700DAA00E8FF59 /* WHCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; };
+		B03F9E8023700DAA00E8FF59 /* WHCoreServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,21 +241,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				B03F9E8023700DAA00E8FF59 /* WHCoreServices.framework in Embed Frameworks */,
 				A6DEFDE32349DA7B001F7502 /* EasyRecipeUI.framework in Embed Frameworks */,
 				A6BA123C2347752B00A81A94 /* EasyRecipeCore.framework in Embed Frameworks */,
 				A6BA1271234785A800A81A94 /* ProfileCore.framework in Embed Frameworks */,
 				A6BA129C23487CAA00A81A94 /* ProfileUI.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A6BA127C234785E600A81A94 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				A6BA127B234785E400A81A94 /* MyService.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +256,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A6E4564C234DE9F5005390A3 /* MyService.framework in Embed Frameworks */,
+				B03F9E7E23700D9200E8FF59 /* WHCoreServices.framework in Embed Frameworks */,
 				A6E45640234DE9C7005390A3 /* ProfileUI.framework in Embed Frameworks */,
 				A6DEFE19234A38BC001F7502 /* WHUIComponents.framework in Embed Frameworks */,
 				A6E45644234DE9D0005390A3 /* EasyRecipeCore.framework in Embed Frameworks */,
@@ -286,13 +277,24 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6E4563E234DE9A0005390A3 /* Embed Frameworks */ = {
+		B03F9E7923700D6000E8FF59 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A6E4563D234DE9A0005390A3 /* MyService.framework in Embed Frameworks */,
+				B03F9E7823700D6000E8FF59 /* WHCoreServices.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B03F9E7C23700D7D00E8FF59 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B03F9E7B23700D7D00E8FF59 /* WHCoreServices.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +414,7 @@
 		A6E45652234DFA0D005390A3 /* HighLevelDependency.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HighLevelDependency.png; sourceTree = "<group>"; };
 		B03552E0235F769E00ADA2B3 /* RecipeDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailSection.swift; sourceTree = "<group>"; };
 		B03F9E75237002CE00E8FF59 /* db.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = db.json; sourceTree = "<group>"; };
+		B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WHCoreServices.framework; path = Carthage/Build/iOS/WHCoreServices.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,7 +426,7 @@
 				A6DEFDE22349DA7B001F7502 /* EasyRecipeUI.framework in Frameworks */,
 				A6BA1270234785A800A81A94 /* ProfileCore.framework in Frameworks */,
 				A6DEFE16234A329C001F7502 /* WHUIComponents.framework in Frameworks */,
-				A6DEFDA32348B07B001F7502 /* MyService.framework in Frameworks */,
+				B03F9E7F23700DAA00E8FF59 /* WHCoreServices.framework in Frameworks */,
 				A6BA129B23487CAA00A81A94 /* ProfileUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +442,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6E4563C234DE9A0005390A3 /* MyService.framework in Frameworks */,
+				B03F9E7723700D6000E8FF59 /* WHCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +458,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6BA127A234785E400A81A94 /* MyService.framework in Frameworks */,
+				B03F9E7A23700D7D00E8FF59 /* WHCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +483,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6E4564B234DE9F5005390A3 /* MyService.framework in Frameworks */,
+				B03F9E7D23700D9100E8FF59 /* WHCoreServices.framework in Frameworks */,
 				A6E4563F234DE9C7005390A3 /* ProfileUI.framework in Frameworks */,
 				A6DEFE18234A38BC001F7502 /* WHUIComponents.framework in Frameworks */,
 				A6E45643234DE9D0005390A3 /* EasyRecipeCore.framework in Frameworks */,
@@ -594,6 +597,7 @@
 		A6BA12512347856300A81A94 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B03F9E7623700D6000E8FF59 /* WHCoreServices.framework */,
 				A6DEFE15234A329C001F7502 /* WHUIComponents.framework */,
 				A6BA12522347856400A81A94 /* MyService.framework */,
 			);
@@ -930,7 +934,7 @@
 				A6BA12222347752900A81A94 /* Sources */,
 				A6BA12232347752900A81A94 /* Frameworks */,
 				A6BA12242347752900A81A94 /* Resources */,
-				A6E4563E234DE9A0005390A3 /* Embed Frameworks */,
+				B03F9E7923700D6000E8FF59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -968,7 +972,7 @@
 				A6BA1257234785A700A81A94 /* Sources */,
 				A6BA1258234785A700A81A94 /* Frameworks */,
 				A6BA1259234785A700A81A94 /* Resources */,
-				A6BA127C234785E600A81A94 /* Embed Frameworks */,
+				B03F9E7C23700D7D00E8FF59 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

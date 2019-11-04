@@ -10,7 +10,7 @@ import UIKit
 import ProfileUI
 import ProfileCore
 import EasyRecipeCore
-import MyService
+import WHCoreServices
 import WHUIComponents
 
 /// Represent a list recipes which include the recipe image, name, headline.

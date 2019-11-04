@@ -38,7 +38,7 @@ The main part of the demo, entry of the EasyRecipe including user login feature.
 
 ## Dependencies
 All the dependencies in this demo app are my private projects.
-1. **[wayne-lab/MyService](https://github.com/chronicqazxc/WHCoreServices)**:
+1. **[chronicqazxc/WHCoreServices](https://github.com/chronicqazxc/WHCoreServices)**:
 2. **[chronicqazxc/WHUIComponent](https://github.com/chronicqazxc/WHUIComponent)**:
 
 ## Example

@@ -8,7 +8,7 @@
 
 import Foundation
 import ProfileCore
-import MyService
+import WHCoreServices
 import WHUIComponents
 
 public enum Placeholder: String {

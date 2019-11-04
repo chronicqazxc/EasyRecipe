@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import MyService
+import WHCoreServices
 
 
 /// Any services which able to get recipes should adopt this protocol.
