@@ -1,4 +1,5 @@
 # App Coding Challenge - Easy Recipe
+[![CI Status](https://travis-ci.com/chronicqazxc/EasyRecipe.svg?branch=master)](https://github.com/chronicqazxc/EasyRecipe)        
 
 # Desclamier
 All the recipes are mock data include the nutrition and ingredients.
