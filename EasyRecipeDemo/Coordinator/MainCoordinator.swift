@@ -13,10 +13,12 @@ import EasyRecipeUI
 import WHUIComponents
 
 class MainCoordinator: Coordinator {
-    
+
+    var presentType: EntryType?
     var delegate: CoordinatorDelegate?
     var coordinators = [Coordinator]()
     var parameters: [AnyHashable : Any]?
+    
     weak private(set) var viewController: UIViewController?
     weak var navigationController: UINavigationController!
     let service = MockService.shared
@@ -53,7 +55,27 @@ class MainCoordinator: Coordinator {
 
 extension MainCoordinator: CoordinatorDelegate {
     func finish() {
+        if presentType == .loginViewDemo {
+            guard let profile = Profile.current else {
+                self.viewController?.dismiss(animated: true, completion: nil)
+                return
+            }
+            let viewModel = LoginViewModel(profileService: MockService.shared)
+            let authenticationService = viewModel.authenticationService
+            let alertController = self.alertController(title: "LoggedIn",
+                                                       message: "\(profile.firstName) \(profile.lastName) \n \(profile.email)", actionTitle: "ok") { (action) in
+                                                        authenticationService.guestLogout()
+            }
+            viewController?.present(alertController, animated: true, completion: nil)
+        }
         coordinators.removeLast()
+    }
+    
+    func alertController(title: String, message: String, actionTitle: String, action: ((UIAlertAction)->Void)? = nil) -> UIAlertController {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: actionTitle, style: .default, handler: action)
+        alertController.addAction(action)
+        return alertController
     }
     
     func navigateToNextPage() {
@@ -61,24 +83,14 @@ extension MainCoordinator: CoordinatorDelegate {
     }
     
     func navigateToNextPage(_ entryType: EntryType) {
+        presentType = entryType
         switch entryType {
         case .loginViewDemo:
             let viewModel = LoginViewModel(profileService: MockService.shared)
-            let authenticationService = viewModel.authenticationService
-            
             let loginCoordinator = LoginViewControllerCoordinator(navigationController: navigationController)
             loginCoordinator.loginViewModel = viewModel
-            loginCoordinator.start {
-                guard let profile = Profile.current else {
-                    self.viewController?.dismiss(animated: true, completion: nil)
-                    return
-                }
-                let alertController = self.alertController(title: "LoggedIn",
-                                                           message: "\(profile.firstName) \(profile.lastName) \n \(profile.email)", actionTitle: "ok") { (action) in
-                                                            authenticationService.guestLogout()
-                }
-                self.viewController?.present(alertController, animated: true, completion: nil)
-            }
+            loginCoordinator.delegate = self
+            loginCoordinator.start()
             coordinators.append(loginCoordinator)
             
         case .easyRecipeDemo:
@@ -91,13 +103,6 @@ extension MainCoordinator: CoordinatorDelegate {
         default:
             break
         }
-    }
-    
-    func alertController(title: String, message: String, actionTitle: String, action: ((UIAlertAction)->Void)? = nil) -> UIAlertController {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: actionTitle, style: .default, handler: action)
-        alertController.addAction(action)
-        return alertController
     }
     
     func naviageBackToPreviousPage(_ entryType: EntryType) {
