@@ -63,7 +63,7 @@ public class RecipeListViewController: UITableViewController {
     // MARK: - Table view data source
 
     override public func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.numberOfSection()
+        return viewModel.numberOfSections()
     }
 
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

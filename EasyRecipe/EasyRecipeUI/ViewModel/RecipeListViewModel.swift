@@ -83,18 +83,6 @@ public class RecipeListViewModel: RecipeViewModel {
         }
     }
     
-    func scrollViewWillBeginDragging() {
-        pendingOperations.suspendAllOperations()
-    }
-    
-    func scrollViewDidEndDragging() {
-        pendingOperations.resumeAllOperations()
-    }
-    
-    func scrollViewDidEndDecelerating() {
-        pendingOperations.resumeAllOperations()
-    }
-    
     func loadImagesForOnScreenCells(pathes: [IndexPath]) {
         pendingOperations.loadImagesForOnScreenCells(indexPathsForVisibleRows: pathes) { [weak self] _ in
             guard let strongSelf = self else {
@@ -140,28 +128,11 @@ public class RecipeListViewModel: RecipeViewModel {
         return ratingForRecipeAt(indexPath: indexPath) != nil ? true : false
     }
     
-    func tableView(didSelectRowAt indexPath: IndexPath) {
-        selectedIndex = indexPath
-        coordinator?.navigateToNextPage()
-    }
-    
     func ratingForRecipeAt(indexPath: IndexPath) -> Int? {
         let recipe = items[indexPath.row]
         return RatingCache.shared.ratingFor(identifier: recipe.id)
     }
-}
-
-extension RecipeListViewModel {
-    func numberOfSection() -> Int {
-        return 1
-    }
     
-    func numberOfRowsInSection(_ section: Int) -> Int {
-        return items.count
-    }
-}
-
-extension RecipeListViewModel {
     func ratingButtonTapped(_ rating: Int, indexPath: IndexPath?) {
         guard let indexPath = indexPath else {
             return
@@ -194,5 +165,34 @@ extension RecipeListViewModel {
         
         PersistentHelper.shared.save()
         completeHandler(true)
+    }
+}
+
+extension RecipeListViewModel: TableViewModel {
+    func tableView(didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath
+        coordinator?.navigateToNextPage()
+    }
+    
+    func numberOfSections() -> Int {
+        return 1
+    }
+    
+    func numberOfRowsInSection(_ section: Int) -> Int {
+        return items.count
+    }
+}
+
+extension RecipeListViewModel: ViewModelScrollable {
+    func scrollViewWillBeginDragging() {
+        pendingOperations.suspendAllOperations()
+    }
+    
+    func scrollViewDidEndDragging() {
+        pendingOperations.resumeAllOperations()
+    }
+    
+    func scrollViewDidEndDecelerating() {
+        pendingOperations.resumeAllOperations()
     }
 }

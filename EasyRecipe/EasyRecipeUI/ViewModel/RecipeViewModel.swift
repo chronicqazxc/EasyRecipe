@@ -15,6 +15,18 @@ protocol RecipeViewModel {
     var coordinator: Coordinator? { get set }
 }
 
+protocol ViewModelScrollable {
+    func scrollViewWillBeginDragging()
+    func scrollViewDidEndDragging()
+    func scrollViewDidEndDecelerating()
+}
+
+protocol TableViewModel {
+    func tableView(didSelectRowAt indexPath: IndexPath)
+    func numberOfSections() -> Int
+    func numberOfRowsInSection(_ section: Int) -> Int
+}
+
 extension RecipeViewModel {
     func isFavorited(_ recipe: Recipe) -> Bool {
         
